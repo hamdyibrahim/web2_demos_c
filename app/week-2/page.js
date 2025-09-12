@@ -10,6 +10,7 @@ export default function Page() {
       <p>
         Sum of {a} and {b} = {a + b}
       </p>
+      <p>we done with week 2 demos</p>
     </main>
   );
 }
