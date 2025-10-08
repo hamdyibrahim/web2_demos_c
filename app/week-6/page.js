@@ -54,7 +54,7 @@ export default function Page() {
           </li>
         ))}
       </ul>
-      <div>You selected {selectedDogId}</div>
+      {selectedDogId && <div>You selected {selectedDogId}</div>}
     </main>
   );
 }
