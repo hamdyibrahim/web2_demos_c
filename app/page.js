@@ -1,17 +1,19 @@
 import Link from "next/link";
 export default function Page() {
+  const weeks = [2, 3, 4, 5, 6, 7, 8, 9, 10];
+
   return (
     <main>
-      <h1 className="font-bold text-4xl">Welcome to Web2 Demos</h1>
-      <Link href="/week-2">Week 2</Link>
-      <br />
-      <Link href="week-3">Week 3</Link>
-      <br />
-      <Link href="week-4">Week 4</Link>
-      <br />
-      <Link href="week-5">Week 5</Link>
-      <br />
-      <Link href="week-6">Week 6</Link>
+      <h1 className="text-4xl text-blue-600 font-bold">
+        Welcome to Web2 Demos
+      </h1>
+      {weeks.map((week) => (
+        <div key={week}>
+          <Link href={`week-${week}`} className="font-bold text-xl">
+            Week {week}
+          </Link>
+        </div>
+      ))}
     </main>
   );
 }
